@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("images/clinicBg51.png");
+  background-size: cover;
+  background-position: center;     
+  background-repeat: no-repeat;   
+  background-attachment: fixed; 
+  margin: 0;
+  height: 100vh;
+}
+
+
+.login-section {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  margin: 100px;
+  width: 350px;
+  height: 400px;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0;
+  color: #14359e;
+}
+
+.login-section p {
+  font-size: 0.9rem;
+  color: #1f1f29;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-group input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.show-password {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #14359e;
+  cursor: pointer;
+}
+
+.option {
+  text-align: right;
+  font-size: 0.7rem;
+  margin-right: 25px;
+}
+
+.option a {
+  text-decoration: none;
+  color: #14359e;
+  cursor: pointer;
+
+}
+
+.option a:hover {
+  color: #1ca7ec;
+}
+
+button {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 9px 0;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 70%;
+  background: #14359e;
+  color: #fff;
+  width: 200px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1ca7ec;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+img {
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 780px) {
+  .login-section {
+    position: absolute;
+    right: 150px;
+    top: 8.5rem;
+    width: 50%;
+    padding: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-section {
+    padding: 1rem;
+  }
+  .input-group input {
+    width: 95%;
+  }
+  button {
+    width: 90%;
+  }
+}
+.label{
+ text-align: left;
+ margin-bottom: 0;
+}
+.custom-confirm-button {
+  border-radius: 10px !important;  /* Add your desired border-radius here */
+  padding: 10px 20px;              /* Optional: Adjust padding for better look */
+}
+.pmodal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color:#fff;
+  width: 700px;
+  max-width: 100%;
+}
+
+.pmodal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-body {
+  padding: 10px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.presformcontainer{
+  position: relative;
+  margin: 20px;
+  max-width: 650px;
+  width: 100%;
+  height: 350px;
+  border-radius: 6px;
+  margin-top: 25px;
+  margin-left: 5px;
+
+  background-color: #fff;
+  overflow: hidden;
+
+}
+.presformcontainer header{
+  position: relative;
+  left: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+.presformcontainer header::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 220px;
+  background-color: #14359e;
+}
+.presformcontainer button{
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: #14359e; 
+}
+.presformcontainer button:hover{
+  background: #1ca7ec;
+  color: #fff;
+  transition: 0.5rem;
+}
+.forms{
+  position: absolute;
+  right: 100px;
+  width: 610px;
+  top: 60px;
+  left: 30px;
+  margin-top: 16px;
+  min-height: 490px;
+  padding-right: 50px;
+  background-color: #fff;
+  transition: 0.3s ease-in;
+  
+}
+
+.forms .title{
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+.fields{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pinput-fields{
+  display: flex;
+  width: calc(100% / 2 - 5px);
+  flex-direction: column;
+  position: relative;
+  width: 300px; /* Adjust the width as needed */
+}
+.pinput-fields label{
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+.pinput-fields input, select{
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+ 
+  height: 37px;
+  margin: 8px 0;
+}
+.pinput-fields input:is(:focus, :valid){
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+.pinput-fields input[type="date"]{
+  color: #707070;
+}
+.pinput-fields input[type="date"]:valid{
+  color: #333;
+}
+#otpbtn {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 600;
+  right: -70px;
+  height: 44px; /* Adjust button position within input */
+  width: 80px;
+  top: 44%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.btn-box{
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
